@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" href="favicon.svg">
+        <meta charset="utf-8">
+        <script src="Hit.js"></script>
+        <script src="Enemy.js"></script>
+        <script src="EnemyFactory.js"></script>
+        <script src="Own.js"></script>
+        <script src="ShootingGame.js"></script>
+        <script src="index.js"></script>
+        <style>
+         /*
+            1 line height = calc((100vh - margin) / child_count);
+          */
+         #own {
+             position: absolute;
+             left: 0;
+             top: 0;
+         }
+         #section_container {
+             position: absolute;
+             left: 0;
+             top: 0;
+             margin: 50px 0;
+             height: calc(100vh - 100px);
+         }
+         #section_container > section {
+             position: relative;
+             height: calc((100vh - 100px) / 9);
+             width: 100vw;
+             text-align: right;
+         }
+         span {
+             font-size: 1em;
+             display: inline-block;
+             height: 100%;
+             line-height: calc((100vh - 100px) / 9);
+         }
+        </style>
+    </head>
+    <body>
+        <h1>シューティングゲーム</h1>
+        <ul>
+            <li id="time">TIME 0
+            <li id="score">SCORE 0
+        </ul>
+        <img src="own.svg" id="own">
+        <section id="enemy_container"></section>
+    </body>
+</html>
